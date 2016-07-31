@@ -5,9 +5,22 @@ create remote repository:utils
 1. click new button on the right of Repositories menu;
 2. write the repository name, descripton ... then click create repository button;
 3. create utils directroy on the local and then:
-   cd utils
-   git init
-	 echo "# Usage of utils" >> README.dm
-	 git commit -a -m "add the README.dm file"
-	 git remote add origin https://github.com/xulongqiu/utils.git 
-	 git push -u origin master
+  cd utils
+  git init
+	echo "# Usage of utils" >> README.dm
+	git commit -a -m "add the README.dm file"
+	git remote add origin https://github.com/xulongqiu/utils.git 
+	git push -u origin master
+	
+add file or direcotry: git/ git.txt
+	git add git/
+	git add git/git.txt
+
+commit the change to local repository
+	git commit -m "change logs"
+
+push the change to remote repository
+	git push -u origin master
+
+check the git repository server address
+  git remote -v
