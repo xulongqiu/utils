@@ -1,5 +1,17 @@
 # the usage of git
 
+2017-03-26
+git download/configure
+1. sudo apt install git
+2. configure username and password
+    git config --global user.name "xulongqiu"
+    git config --global user.email "xulongqiu163@163.com"
+3. generate ssh key
+    ssh-keygen -t rsa -C "xulongqiu163@163.com"
+    login github
+    Settings -> SSH and GPP keys -> SSH keys > New SSH key
+    cat ~/.ssh/id_rsa.pub
+
 2016-07-31
 create remote repository:utils
 1. click new button on the right of Repositories menu;
@@ -24,3 +36,22 @@ push the change to remote repository
 
 check the git repository server address
   git remote -v
+
+2017-03-26
+add local repository to remote:
+1. click new button on the right of Repositories menu;
+2. write the repository name, descripton ... then click create repository button;
+3. git remote set-url origin git@github.com:xulongqiu/raspberry-circle.git
+4. git push origin master
+5. git push git push origin eric_local:eric
+
+delete remote branch(eric_local):
+1.git push origin --delete eric_local
+
+reset any commit:
+1. git log
+    git reset --hard commit_num
+2. git reflog
+    git reset --hard commit_num
+
+
