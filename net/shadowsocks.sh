@@ -1,0 +1,10 @@
+{
+    "server":"us03-80.ssv7.net",
+    "server_port":62315,
+    "local_address":"127.0.0.1",
+    "local_port":1080,
+    "password":"FzKYNn4W3vVF",
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open":false
+}
