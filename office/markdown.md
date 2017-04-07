@@ -49,7 +49,7 @@ This is second paragraph.
 
 - ## code
 
- ```
+ ```C
  void main(int argc, unsigned char* argv[]){
     printf("Hello, markdown!");
     return 0;
@@ -61,19 +61,15 @@ This is second paragraph.
  - [] todo
 
 - ## Flowchart
-
- ```
- graph TD
+ ```graph
     A[Christmas] --> B(Go shoppng)
     B --> C{Let me think}
     C --> |1| D[Laptop]
     C --> |2| E[iPhone]
     C --> |3| F[Car]
  ```
-
 - ## Gantt
- ``` 
- gantt
+ ```gantt
  dateFormat YYYY-MM-DD
  title 产品计划表
  section 初期阶段 
@@ -85,13 +81,12 @@ This is second paragraph.
  
  section 后期阶段
  研发自测: 2017-04-03, 2d
- 测试测试: 2017-04-04, 3d
- 
+ 测试测试: 2017-04-04, 3
  ```
-- ## Math 
- $y = x^2$
+- ## Math
+  $y = x^2$
  ***
- $(x + y)^2 = x^2 + 2xy + y^2$
+   $(x + y)^2 = x^2 + 2xy + y^2$
  ***
  $\oint_C x^3\,dx + 4y^2\,dy$
  ***
