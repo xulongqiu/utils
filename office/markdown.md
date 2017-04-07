@@ -84,7 +84,8 @@ This is second paragraph.
  测试测试: 2017-04-04, 3
  ```
 - ## Math
-  $y = x^2$
+```math
+  $y = x^2$
  ***
    $(x + y)^2 = x^2 + 2xy + y^2$
  ***
