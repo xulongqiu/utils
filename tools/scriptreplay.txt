@@ -1,0 +1,20 @@
+[root@localhost ~]# wget http://dxdown.onlinedown.net/down/util-linux-ng-2.17.2.tar.zip
+[root@localhost ~]# unzip util-linux-ng-2.17.2.tar.zip
+[root@localhost ~]# tar zxvf util-linux-ng-2.17.2.tar.gz
+[root@localhost ~]# cd util-linux-ng-2.17.2
+[root@localhost ~]# ./configure && make (注意此处只是make了)
+[root@localhost ~]# cp misc-utils/scriptreplay /usr/bin/
+[root@localhost ~]# cd ..
+[root@localhost ~]# rm -rf util-linux-ng-2.17.2*
+
+
+[root@localhost ~]# script -t 2> test.time -a test.txt
+Script started, file is test.txt
+[root@localhost ~]#
+
+[root@localhost ~]# exit
+exit
+Script done, file is test.txt
+[root@localhost ~]#
+
+[root@localhost ~]# scriptreplay test.time test.txt
