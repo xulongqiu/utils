@@ -54,4 +54,8 @@ reset any commit:
 2. git reflog
     git reset --hard commit_num
 
-
+2017-09-14
+report below error even though add the ssh key to git:
+sign_and_send_pubkey: signing failed: agent refused operation
+eval "$(ssh-agent -s)"
+ssh-add
