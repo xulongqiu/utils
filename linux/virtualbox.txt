@@ -1,0 +1,9 @@
+VirtualBox安装VBoxLinuxAdditions错误：unable to find the sources of your current linux kernel
+centos:
+# yum install gcc kernel-devel kernel-headers 
+# shutdown -h now
+
+ubuntu:
+# sudo apt-get install gcc kernel-devel kernel-headers 
+
+再次安装VBoxLinuxAdditions，OK。
