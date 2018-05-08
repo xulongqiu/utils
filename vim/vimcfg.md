@@ -24,7 +24,7 @@
   ```
   - .vimrc
   ```
-  ~$ echo "source ~/gitvim/.vimrc-private"
+  ~$ echo "source ~/gitvim/.vimrc-private" > ~/.vimrc
   ```
   - install bundle plugins
   ```
