@@ -1,0 +1,4 @@
+## MindManager
+  - VYM
+  - freemind
+  - xmind
