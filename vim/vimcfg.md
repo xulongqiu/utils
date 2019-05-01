@@ -20,7 +20,7 @@
   ```
   - libs
   ```
-  ~$ sudo apt-get install build-essential cmake python-dev python3-dev
+  ~$ sudo apt-get install build-essential cmake python-dev python3-dev gcc ctags
   ```
   - .vimrc
   ```
