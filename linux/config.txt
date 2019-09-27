@@ -1,0 +1,33 @@
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.old
+sudo gedit /etc/apt/sources.list
+# deb cdrom:[Ubuntu 16.04 LTS _Xenial Xerus_ - Release amd64 (20160420.1)]/ xenial main restricted
+deb-src http://archive.ubuntu.com/ubuntu xenial main restricted #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted multiverse universe #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted multiverse universe #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse #Added by software-properties
+deb http://archive.canonical.com/ubuntu xenial partner
+deb-src http://archive.canonical.com/ubuntu xenial partner
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse
+sudo apt-get update
+
+sudo apt-get install npm
+sudo npm install -g cnpm --registry=https://registry.npm.taobao.org
+sudo npm cache clean -f
+sudo n stable
+sudo cnpm install gitbook-cli -g
+wget http://downloads.editor.gitbook.com/download/linux
+sudo apt-get install vim git gitk axcel ctags adb
+# openwrt
+sudo apt-get install libncurses5-dev build-essential zlib1g-dev gawk libjson-c-dev
+libbonoboui2-dev libgnome2-dev libgnomeui-dev libgnomevfs2-dev libicu-dev libxml2-dev
+
