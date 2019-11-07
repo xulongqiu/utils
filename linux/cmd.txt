@@ -6,7 +6,7 @@
 【kill】    一般与ps联合使用
             kill -9 pid; kill -l
 【pkill】   按照进程名杀死进程
-            pkill command 
+            pkill command
 【killall】 和pkill基本一致
 【ps】      查看进程
             ps -aux
@@ -30,7 +30,7 @@
 【mount】   挂载文件系统，硬盘，分区， 与之对应的umount卸载
             mount -l 显示已挂载的文件系统
             mount src dst 挂载 src 到dst
- 
+
 5. 系统开关机和重启
 【reboot】  重启系统
 【shutdown】关机， 重启
@@ -38,9 +38,9 @@
             shutdown -h 12:34  12:34关机
             shutdown +5 5分钟后关机
             shutdown -r 重启
-【poweroff】关机掉电    
+【poweroff】关机掉电
 【init】    init 0 关机
-            init 6 重启 
+            init 6 重启
 
 6. 网络应用
 【axel】    多线程下载工具
@@ -48,9 +48,9 @@
 【curl】    命令行get post请求
             curl -I www.baidu.com 只显示请求头
             curl -v www.baidu.com 显示全部请求过程
-            curl www.baidu.com -o baidu.index 获取请求内容到文件 
+            curl www.baidu.com -o baidu.index 获取请求内容到文件
 【wget】    下载工具
-            wget -c url  -c表示断点续传    
+            wget -c url  -c表示断点续传
 【telnet】  远程登录
             telnet ip
 【ssh】     远程登录
@@ -70,9 +70,9 @@
             ss -pl |grep 8080 找出打开8080端口的应用程序
             ss -u -a 显示所有udp链接
 【ping】    用于检验网路服务器／主机是否可达
-            ping www.baidu.com 
+            ping www.baidu.com
 【iperf】   一款网络性能测试工具，包括udp和tcp，服务端和客户端同时使用此工具
-            服务端：iperf -u -s  
+            服务端：iperf -u -s
             客户端：iperf -u -c 192.168.1.1 -b 100M -t 60，在udp模式下，以100Mbps的数据发送速率，客户端到服务器192.168.1.1上传带宽测试，测试时间为60秒
             客户端：iperf -u -c 192.168.1.1 -b 5M -P 30 -t 60 发起30个链接
 【netstat】 用法和ss差不多
@@ -119,7 +119,7 @@
 【find】    查找文件
             find . -type f -name "*.txt" -o -name "*.pdf" 查找当前目录所有txt和pdf的普通文件，-type 制定文件类型
 【diff】    文本文件比较，可以比较代码文件
-            diff code-version1.c code-version2.c 
+            diff code-version1.c code-version2.c
 【cmp】     比较二进制文件
             cmp 1.mp3 2.mp3
 
@@ -136,10 +136,10 @@
             tail -f -s 3 file 显示file追加的内容，每隔3秒显示一次
             tail +50 file  显示file从第50行到末尾的内容
 【hexdump】 用于显示二进制文件
- 
+
 12. 文件名处理
 【touch】   创建空文件
-            touch flag_file 
+            touch flag_file
 【ln】      创建文件链接，氛围软连接和硬链接
             ln src dest src 链接到dst，默认为硬链接，硬连接相当于引用计数，硬连接不能链接路径， rm 一次引用计数减1，减少到0，此文件从硬盘删除
 【dirname】 获取文件名的路径名
@@ -179,7 +179,7 @@
 【chgrp】   更改文件／文件夹所属群组
             chgrp -R iso-dev ／work／app
 【file】    查看文件类型，常在shell脚本中使用，根据不同文件类型做不同处理
-            file demoe.c  
+            file demoe.c
 
 15. 压缩与解压缩
 【tar】     压缩解压缩.tar, .tar.gz的文件
@@ -198,23 +198,23 @@
             echo "1 2 3 4 5 6" | xargs -n3 结果为：
             1 2 3
             4 5 6
-            
+
             -d选项用来指定边界符
             echo "nameXnameXnameXname" | xargs -dX -n2 结果为：
             name name
             name name
-            
+
             选项-I 和 -i的使用，这两个选项使用{}来替换字符串
             ls *.c | xargs -n1 -i cp {} /work/cfiles  拷贝所有.c文件到cfiles，相当于  cp *.c /work/cfiles
             ls *.c | xargs -n1 -i {} cp {} /work/files  -I 必须指定替换符{}
-            
+
             xargs 和find结合使用
             find . -type f -name "*.log" -print0 |xargs -0 rm -f  -0相当于-d“\0”,删除所有.log的所有文件
             find . -type f -name "*.jpg" -print |xargs tar -czvf images.tar.gz    找出所有jpg文件比压缩打包
-            
+
             批量处理
             cat url-list.txt|xargs wget -c  下载txt文件中所有url
-            
+
             -p -t参数 -t表示每执行一步都需要确认， -p参数表示执行命令前打印要执行的命令，可以用这连个参数查看具体执行的步骤
 
 【awk】     awk是一种编程语言，非常强大，支持数组函数，if 等关键字，awk以行为最小处理单位，也就是一行行读取文本作为awk命令的输入
@@ -222,11 +222,11 @@
             -F 指定分割符，可以基本的符号，也可以是正则表达式，默认为空格
             -f 使用awk脚本作为输入
             awk脚本基本结构：
-            awk ‘BEGIN{ cmds }  pattern{ cmds } END{ cmds }’ filename 
+            awk ‘BEGIN{ cmds }  pattern{ cmds } END{ cmds }’ filename
             读取文本之前先执行BEGIN{ cmds }, 之后读取文本的每一行执行pattern{ cmds }, 文本读取完成后执行END{cmds}；这三个部分都可有可无
             我用的比较多的就是列截取，例如ps后我只想取PID列和CMD列，则
             ps | awk '{ print $1"  "$ 3}'  "" 是连接符的意思，即两列之间用空格连接／隔开
-            
+
             awk应用非常之多，用到的时候可以具体看
 
 【grep】    强大的文本搜索工具，按照行搜索匹配，并把匹配到的行打印出来
@@ -251,6 +251,7 @@
             ifconfig | grep 'inet addr' | sed 's/^.*addr://g' | sed 's/ Bcast.*$//g'
             直接编辑原始文件：
             sed  -i 's/\.$/\!/g' demo.txt 每一行结尾的.替换成！
+            sed  -i 's/\/\/#define LOG_NDEBUG 0/#define LOG_NDEBUG 0/g' `grep LOG_NDEBUG -rl .` 递归搜索包含有LOG_NDEBUG字符串的文件，并把//#define LOG_NDEBUG 0替换为#define LOG_NDEBUG 0
 
 【cut】     cut命令实现了awk显示某几列的功能，也可以拼接多个文件
             选项 -d 指定分隔符 -f显示指定列的内容 --complement 逆向选择
@@ -263,7 +264,7 @@
 
 【look】    用于查询单词
             look Th demo.txt 查询以Th开头的单词
-            
+
 【tee】     将数据重定向到文件，同时提供数据副本给后续命令
             ls | tee ls.out 将ls的内容输入到ls.out
 
@@ -273,7 +274,7 @@
             date 1.2 1.3
             work 4    8
             sleep 7   6
-            
+
             cat file2.txt
             date 1.4 1.5
             work  5   1
@@ -281,7 +282,7 @@
             join file1.txt file2.txt 结果为：
             date 1.2 1.3 1.4 1.5
             work 4  8 5 1
-            sleep 7 6 9 7         
+            sleep 7 6 9 7
 
 【wc】      用来统计文本行数
             wl -l demo.txt
