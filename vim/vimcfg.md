@@ -4,6 +4,29 @@
 ```
 
 ### config vim
+  - cscope
+  ```
+  ~$ sudo apt-get install cscope
+  ```
+  - universal-ctags
+  ```
+  ~$ git clone https://github.com/universal-ctags/ctags
+  ~$ cd ctags
+  ~$ ./autogen.sh
+  ~$ ./configure --prefix=/home/eric/tools/universal-ctags
+  ~$ make -j8 & make install
+  ~$ ln -s ~/tools/universal-ctags/bin/ctags ~/bin/ctags
+  ```
+  - gtags -- not use
+  ```
+  ~$ wget https://ftp.gnu.org/pub/gnu/global/latest.tar.gz
+  ~$ tar -zxvf latest.tar.gz
+  ~$ cd global
+  ~$ ./configure --prefix=/home/eric/tools/gtags --with-sqlite3
+  ~$ make -j16 & make install
+  ~$ ln -s /home/eric/tools/gtags/bin/gtags /home/eric/bin/gtags
+  ~$ ln -s /home/eric/tools/gtags/bin/gtags-cscope /home/eric/bin/gtags-cscope
+  ```
   - gitvim
   ```
   ~$ git clone git@github.com:xulongqiu/gitvim.git
