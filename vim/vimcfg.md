@@ -4,11 +4,11 @@
 ```
 
 ### config vim
-  - cscope
+  - cscope - not use
   ```
   ~$ sudo apt-get install cscope
   ```
-  - universal-ctags
+  - universal-ctags - not use
   ```
   ~$ git clone https://github.com/universal-ctags/ctags
   ~$ cd ctags
@@ -17,7 +17,7 @@
   ~$ make -j8 & make install
   ~$ ln -s ~/tools/universal-ctags/bin/ctags ~/bin/ctags
   ```
-  - gtags -- not use
+  - gtags
   ```
   ~$ wget https://ftp.gnu.org/pub/gnu/global/latest.tar.gz
   ~$ tar -zxvf latest.tar.gz
