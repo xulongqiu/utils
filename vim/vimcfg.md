@@ -26,6 +26,8 @@
   ~$ make -j16 & make install
   ~$ ln -s /home/eric/tools/gtags/bin/gtags /home/eric/bin/gtags
   ~$ ln -s /home/eric/tools/gtags/bin/gtags-cscope /home/eric/bin/gtags-cscope
+  ~$ ln -s /home/xlq/tools/gtags/bin/global /home/xlq/bin/global
+  ~$ ln -s /home/xlq/tools/gtags/bin/globash /home/xlq/bin/globash
   ```
   - gitvim
   ```
