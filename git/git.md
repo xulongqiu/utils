@@ -1,6 +1,6 @@
 # the usage of git
 
-> 2017-03-26 
+> 2017-03-26
 
 **git download/configure**
 * sudo apt install git
@@ -17,7 +17,7 @@
   cat ~/.ssh/id_rsa.pub
   ```
 
-> 2016-07-31 
+> 2016-07-31
 
 **create remote repository:utils**
 * click new button on the right of Repositories menu;
@@ -28,10 +28,10 @@
   git init
   echo "# Usage of utils" >> README.dm
   git commit -a -m "add the README.dm file"
-  git remote add origin https://github.com/xulongqiu/utils.git 
+  git remote add origin https://github.com/xulongqiu/utils.git
   git push -u origin master
   ```
-	
+
 * add file or direcotry: git/ git.txt
   ```
   git add git/
@@ -53,7 +53,7 @@
   git remote -v
   ```
 
-> 2017-03-26 
+> 2017-03-26
 
 **add local repository to remote:**
 * click new button on the right of Repositories menu;
@@ -75,7 +75,7 @@
   ```
 * git reflog
   ```
-  git reset --hard commit_num 
+  git reset --hard commit_num
   ```
 
 > 2017-09-14
@@ -99,7 +99,7 @@ delete local cached branch that has been removed at remote
   ```
   git commit --amend -m "new commit"   #with new commit messages
   git commit --amend --no-edit         #do not change commit messages
-  ```  
+  ```
 * 为了对齐提交线，git push 之前尽量先git pull
   ```
   git pull orign xxx --rebase
@@ -119,3 +119,20 @@ delete local cached branch that has been removed at remote
   git rebase --continue
   ```
 
+* 更新git
+  ```
+  sudo add-apt-repository ppa:git-core/ppa
+  sudo apt update
+  sudo apt install git
+  sudo apt install git-core
+  ```
+
+* git 拆分
+  ```
+  cd repo
+  git subtree split -P path/module -b module_branch
+  mkdir ../module_repo
+  cd ../module_repo
+  git init
+  git  pull ../repo module_branch
+  ```
