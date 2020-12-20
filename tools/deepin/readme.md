@@ -6,6 +6,7 @@
 ```
 ## wechat
 ```
+ download: http://packages.deepin.com/deepin/pool/non-free/d/
  sudo dpkg -i deepin.com.wechat_2.6.8.65deepin0_i386.deb
 ```
 ## font
