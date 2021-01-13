@@ -4,11 +4,11 @@
 ```
 
 ### config vim
-  - cscope - not use
+  - cscope - not use, instead by gtags-cscope
   ```
   ~$ sudo apt-get install cscope
   ```
-  - universal-ctags - not use
+  - universal-ctags - instead of Exuberant
   ```
   ~$ git clone https://github.com/universal-ctags/ctags
   ~$ cd ctags
