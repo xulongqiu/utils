@@ -11,8 +11,8 @@
 		"--convert-tabs",  // -c
 		"--add-brackets",  // -j  Add brackets to unbracketed one line conditional statements.
 		"--keep-one-line-statements", // -o Don't break lines containing multiple statements into multiple single-statement lines.
-		// "--max-code-length=80", // -Xc80
-		"--break-after-logical", // -XL
+		// "--max-code-length=80", // -xC80
+		"--break-after-logical", // -xL
 		// padding options
 		"--align-pointer=type", // -k1
         "--align-reference=name", // -W3
