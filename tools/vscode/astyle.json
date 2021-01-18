@@ -1,0 +1,27 @@
+{
+    // astyle
+	"astyle.executable": "astyle",
+    "astyle.additional_languages": [
+        "c",
+        "cpp"
+    ],
+    "astyle.cmd_options": [
+        "--style=google",
+		"--indent=spaces=4",
+		"--convert-tabs",  // -c
+		"--add-brackets",  // -j  Add brackets to unbracketed one line conditional statements.
+		"--keep-one-line-statements", // -o Don't break lines containing multiple statements into multiple single-statement lines.
+		// "--max-code-length=80", // -Xc80
+		"--break-after-logical", // -XL
+		// padding options
+		"--align-pointer=type", // -k1
+        "--align-reference=name", // -W3
+		"--break-blocks", // -f Insert empty lines around unrelated blocks, labels, classes, ...
+		"--unpad-paren",  // -U Remove unnecessary space padding around parenthesis
+        "--pad-header",   // -H Insert space padding after paren headers (e.g. 'if', 'for'...)
+		"--pad-oper",     // -p Insert space padding around operators.
+		// other options
+		"--suffix=none",  // -n Do not retain a backup of the original file.
+		"--lineend=linux", // -z2
+    ]
+}
