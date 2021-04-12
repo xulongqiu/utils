@@ -8,8 +8,9 @@
   ```
   ~$ sudo apt-get install cscope
   ```
-  - universal-ctags - instead of Exuberant
+  - universal-ctags - instead of Exuberant, only on linux
   ```
+  -$ MacOS: brew tap universal-ctags/universal-ctags & brew install --HEAD universal-ctags
   ~$ git clone https://github.com/universal-ctags/ctags
   ~$ cd ctags
   ~$ ./autogen.sh
@@ -19,6 +20,7 @@
   ```
   - gtags
   ```
+  -$ MacOS: brew install global
   ~$ wget https://ftp.gnu.org/pub/gnu/global/latest.tar.gz
   ~$ tar -zxvf latest.tar.gz
   ~$ cd global
